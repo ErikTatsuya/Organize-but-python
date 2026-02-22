@@ -13,7 +13,7 @@ Ferramenta de linha de comando para organizar arquivos por categoria.
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/organize.git
+git clone https://github.com/seu-usuario/Organize-but-python.git
 cd organize
 
 Instale localmente:
