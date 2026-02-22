@@ -1,4 +1,4 @@
-# organize
+# Organize-but-python
 
 Ferramenta de linha de comando para organizar arquivos por categoria.
 
