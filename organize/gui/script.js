@@ -4,9 +4,9 @@ new QWebChannel(qt.webChannelTransport, function (channel) {
 	backend = channel.objects.backend;
 });
 
-function chamarPython() {
-	backend.somar(5, 7).then(function (resultado) {
-		document.getElementById("resultado").innerText =
-			"Resultado: " + resultado;
-	});
+async function chamarPython() {
+	let dir_path = await backend.select_dir_path();
+
+	document.getElementById("resultado").textContent =
+		`Pasta selecionada: ${dir_path}`;
 }
