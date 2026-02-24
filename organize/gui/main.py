@@ -8,9 +8,8 @@ from PySide6.QtWebChannel import QWebChannel
 class Backend(QObject):
 
     @Slot(int, int, result=int)
-    def somar(self, a, b):
-        print(f"Python recebeu: {a} + {b}")
-        return a + b
+    def select_folder_path(self, ):
+        return 
 
 
 app = QApplication(sys.argv)
