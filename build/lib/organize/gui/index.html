@@ -8,8 +8,43 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<p id="result"></p>
-		<button onclick="chooseDirPath()">selecionar arquivos</button>
-		<button onclick="organizeDir()">organizar</button>
+		<div class="header">
+			<img src="images/organize.png" alt="" />
+			<h1>Organize But Python</h1>
+		</div>
+		<div class="content">
+			<p id="result">A short message as example</p>
+			<input
+				type="text"
+				id="dirPathInput"
+				placeholder="Caminho do diretório"
+			/>
+			<button onclick="chooseDirPath()">
+				<div
+					style="
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 0.5rem;
+					"
+				>
+					selecionar arquivos
+					<img src="images/folder.svg" alt="" />
+				</div>
+			</button>
+			<button onclick="organizeDir()">
+				<div
+					style="
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 0.5rem;
+					"
+				>
+					organizar arquivos
+					<img src="images/folder_organize.svg" alt="" />
+				</div>
+			</button>
+		</div>
 	</body>
 </html>

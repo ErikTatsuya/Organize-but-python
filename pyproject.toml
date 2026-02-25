@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "organize"
-version = "0.2.0"
-description = "Ferramenta CLI para organizar arquivos por categoria"
+version = "0.2.1"
+description = "Ferramenta CLI e GUI para organizar arquivos por categoria"
 authors = [
     { name = "Erik" }
 ]
@@ -14,7 +14,7 @@ license = { file = "LICENSE" }
 requires-python = ">=3.9"
 
 [tool.setuptools.package-data]
-"organize.gui" = ["*.html", "*.css", "*.js"]
+"organize.gui" = ["*.html", "*.css", "*.js", "images/*"]
 
 [project.scripts]
 organize = "organize.organizadinho:main"

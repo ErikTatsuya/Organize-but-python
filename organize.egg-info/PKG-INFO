@@ -1,7 +1,7 @@
 Metadata-Version: 2.4
 Name: organize
-Version: 0.2.0
-Summary: Ferramenta CLI para organizar arquivos por categoria
+Version: 0.2.1
+Summary: Ferramenta CLI e GUI para organizar arquivos por categoria
 Author: Erik
 License: MIT License
         

@@ -13,3 +13,6 @@ organize/gui/gui.py
 organize/gui/index.html
 organize/gui/script.js
 organize/gui/style.css
+organize/gui/images/folder.svg
+organize/gui/images/folder_organize.svg
+organize/gui/images/organize.png
