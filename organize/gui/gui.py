@@ -24,7 +24,7 @@ class Backend(QObject):
         if dir_path:
             organize(dir_path, CATEGORIES)
 
-def main():        
+def main_gui():        
     app = QApplication(sys.argv)
 
     view = QWebEngineView()
@@ -43,4 +43,4 @@ def main():
     sys.exit(app.exec())
 
 if __name__ == "__main__":
-    main()
+    main_gui()
