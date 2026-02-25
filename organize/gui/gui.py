@@ -24,20 +24,23 @@ class Backend(QObject):
         if dir_path:
             organize(dir_path, CATEGORIES)
 
+def main():        
+    app = QApplication(sys.argv)
 
-app = QApplication(sys.argv)
+    view = QWebEngineView()
 
-view = QWebEngineView()
+    channel = QWebChannel()
+    backend = Backend()
+    channel.registerObject("backend", backend)
+    view.page().setWebChannel(channel)
 
-channel = QWebChannel()
-backend = Backend()
-channel.registerObject("backend", backend)
-view.page().setWebChannel(channel)
+    html_path = Path(__file__).parent / "index.html"
+    view.setUrl(QUrl.fromLocalFile(str(html_path)))
 
-html_path = Path(__file__).parent / "index.html"
-view.setUrl(QUrl.fromLocalFile(str(html_path)))
+    view.resize(600, 400)
+    view.show()
 
-view.resize(600, 400)
-view.show()
+    sys.exit(app.exec())
 
-sys.exit(app.exec())
+if __name__ == "__main__":
+    main()
