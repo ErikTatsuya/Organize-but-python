@@ -9,3 +9,7 @@ organize.egg-info/SOURCES.txt
 organize.egg-info/dependency_links.txt
 organize.egg-info/entry_points.txt
 organize.egg-info/top_level.txt
+organize/gui/gui.py
+organize/gui/index.html
+organize/gui/script.js
+organize/gui/style.css

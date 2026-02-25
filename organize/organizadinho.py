@@ -37,9 +37,7 @@ def main():
         organize(args.path, CATEGORIES)
 
     elif args.command == "gui":
-        from organize.gui.gui import run_gui
-    
-    main_gui()
+        main_gui()
 
 if __name__ == "__main__":
     main()
