@@ -69,6 +69,9 @@ def organize(base_path, CATEGORIES):
 
     for file in base_path.iterdir():
 
+        if file.is_dir():
+            continue
+
         # 1. Construir extensão composta
         suffix_list = file.suffixes
         cleaned = []
