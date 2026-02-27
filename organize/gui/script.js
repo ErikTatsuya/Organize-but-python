@@ -1,5 +1,7 @@
 let backend = null;
 let dir_path = null;
+let input = document.getElementById("dirPathInput");
+let result = document.getElementById("result");
 
 document.addEventListener("DOMContentLoaded", function () {
 	new QWebChannel(qt.webChannelTransport, function (channel) {
@@ -13,16 +15,16 @@ async function chooseDirPath() {
 
 	dir_path = await backend.select_dir_path();
 
-	document.getElementById("result").textContent =
-		`Pasta selecionada: ${dir_path}`;
+	result.textContent = `Pasta selecionada: ${dir_path}`;
+	input.value = dir_path;
 }
 
 async function organizeDir() {
 	if (!backend) return;
 
 	if (!dir_path) {
-		document.getElementById("result").textContent =
-			"Por favor, selecione uma pasta primeiro.";
+		result.textContent = "Por favor, selecione uma pasta primeiro.";
+		input.value = "";
 		return;
 	}
 
@@ -30,5 +32,6 @@ async function organizeDir() {
 
 	dir_path = null;
 
-	document.getElementById("result").textContent = "Arquivos organizados";
+	result.textContent = "Arquivos organizados";
+	input.value = "";
 }

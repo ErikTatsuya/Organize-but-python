@@ -1,6 +1,5 @@
 #!/usr/bin/env python3t Path
 
-from pathlib import Path
 import argparse
 from organize.core import organize, CATEGORIES
 from organize.gui.gui import main_gui

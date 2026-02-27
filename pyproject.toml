@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "organize"
-version = "0.2.1"
+version = "0.2.2"
 description = "Ferramenta CLI e GUI para organizar arquivos por categoria"
 authors = [
     { name = "Erik" }
