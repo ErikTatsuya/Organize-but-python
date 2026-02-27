@@ -1,36 +1,49 @@
 # Organize-but-python
 
-Ferramenta de linha de comando para organizar arquivos por categoria.
+Ferramenta CLI e GUI para organizar arquivos baseado na extensão do arquivo.
 
 ## Funcionalidades
 
 - Organiza arquivos por tipo (vídeos, imagens, dev, documentos, etc.)
 - Suporte a extensões compostas (ex: .tar.gz)
 - Trata arquivos sem extensão
-- Interface simples via terminal
+- Interface simples via terminal e GUI
 
 ## Instalação
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/Organize-but-python.git
-cd organize
+<p>
+  <code>git clone https://github.com/ErikTatsuya/Organize-but-python/ && cd organize</code>
+</p>
 
 Instale localmente:
 
-pip install .
+<p>
+	<code>pip install .</code>
+</p>
 
 Ou instale em modo desenvolvimento:
 
-pip install -e .
+<p>
+	<code>pip install -e .</code>
+</p>
 
 ## Uso
 
-organize CAMINHO
+organize <opção> <caminho>
 
 Exemplo:
 
-organize .
+<p>
+	<code>organize run ~/Dowloads</code>
+</p>
+
+ou
+
+<p>
+	<code>organize gui</code>
+</p>
 
 ## Como funciona
 
@@ -44,4 +57,5 @@ O algoritmo:
 ## Licença
 
 MIT
+
 # Organize-but-python
