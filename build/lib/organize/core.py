@@ -1,4 +1,4 @@
-from organize.log import log, generate_log_filename
+from organize.log import write_log, generate_log_filename
 from pathlib import Path
 import shutil
 
@@ -66,6 +66,7 @@ def find_special_file_category(special_map, filename):
 
 def organize(base_path, CATEGORIES):
     base_path = Path(base_path)
+    log_file = generate_log_filename(Path("logs"))
 
     for file in base_path.iterdir():
 
@@ -104,7 +105,6 @@ def organize(base_path, CATEGORIES):
 
         destination.mkdir(parents=True, exist_ok=True)
 
-        log_file = generate_log_filename(Path("logs"))
-        log(log_file ,file, destination)
+        write_log(log_file, file, destination)
 
         shutil.move(str(file), str(destination / file.name))

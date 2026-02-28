@@ -27,9 +27,3 @@ def write_log(log_file, source, destination):
     with open(log_file, "a") as file:
         json.dump(log_entry, file)
         file.write("\n")
-
-def log(log_file, source, destination):
-    log_file.parent.mkdir(exist_ok=True)
-
-    write_log(log_file, source, destination)
-
