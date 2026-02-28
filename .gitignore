@@ -1,1 +1,3 @@
-./example/
+example/
+logs/
+organize/__pycache__/

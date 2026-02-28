@@ -3,6 +3,7 @@ README.md
 pyproject.toml
 organize/__init__.py
 organize/core.py
+organize/log.py
 organize/organizadinho.py
 organize.egg-info/PKG-INFO
 organize.egg-info/SOURCES.txt

@@ -1,6 +1,6 @@
+from organize.log import log_organized_file
 from pathlib import Path
 import shutil
-
 
 CATEGORIES = {
     "media": {
@@ -103,5 +103,7 @@ def organize(base_path, CATEGORIES):
             destination = destination / part
 
         destination.mkdir(parents=True, exist_ok=True)
+
+        log_organized_file(file, destination / file.name)
 
         shutil.move(str(file), str(destination / file.name))
