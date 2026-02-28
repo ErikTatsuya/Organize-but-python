@@ -17,4 +17,26 @@ requires-python = ">=3.9"
 "organize.gui" = ["*.html", "*.css", "*.js", "images/*"]
 
 [project.scripts]
+organize = "organize.organizadinho:main"[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "organize"
+version = "0.2.3"
+description = "Ferramenta CLI e GUI para organizar arquivos por categoria"
+authors = [
+    { name = "Erik" }
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+
+[project.scripts]
 organize = "organize.organizadinho:main"
+
+[tool.setuptools]
+packages = ["organize"]
+
+[tool.setuptools.package-data]
+"organize.gui" = ["*.html", "*.css", "*.js", "images/*"]
