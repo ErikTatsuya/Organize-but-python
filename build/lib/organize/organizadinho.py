@@ -12,7 +12,7 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command")
 
-    # Subcomando CLI
+    # roda oraganizador pela CLI
     run_parser = subparsers.add_parser(
         "run",
         help="Organiza arquivos em um diretório"
@@ -27,7 +27,7 @@ def main():
 
     args = parser.parse_args()
 
-    # Se nenhum subcomando for passado
+    #ajuda se nenhum argumento ou comando for passado
     if args.command is None:
         parser.print_help()
         return

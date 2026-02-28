@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: organize
-Version: 0.2.2
+Version: 0.2.3
 Summary: Ferramenta CLI e GUI para organizar arquivos por categoria
 Author: Erik
 License: MIT License
@@ -45,10 +45,40 @@ Ferramenta CLI e GUI para organizar arquivos baseado na extensão do arquivo.
 Clone o repositório:
 
 <p>
-  <code>git clone https://github.com/ErikTatsuya/Organize-but-python/ && cd organize</code>
+  <code>git clone https://github.com/ErikTatsuya/Organize-but-python/ </code>
 </p>
 
-Instale localmente:
+E vá para o diretório "organize":
+
+<p>
+  <code>cd organize</code>
+</p>
+
+Depois crie a venv:
+
+<p>
+	<code>python -m venv venv</code>
+</p>
+Ativar a venv:
+<p>
+	linux:
+	<code>source venv/bin/activate</code>
+</p>
+
+ou
+
+<p>
+    windows:
+    	<code>.\venv\Scripts\Activate</code>
+</p>
+
+Instalar depedências:
+
+<p>
+	<code>pip install requirements.txt</code>
+</p>
+
+E então instale localmente:
 
 <p>
 	<code>pip install .</code>

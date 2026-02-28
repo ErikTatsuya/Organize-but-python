@@ -40,16 +40,16 @@ SPECIAL_FILES = {
 }
 
 
-def find_category(tree, ext, path=None):
+def find_category(CATEGORIES, extension, path=None):
     if path is None:
         path = []
 
-    for key, value in tree.items():
+    for key, value in CATEGORIES.items():
         if isinstance(value, list):
-            if ext in value:
-                return path + [key]
+            if extension in value:
+                return path + [key] + extension.split(".")
         elif isinstance(value, dict):
-            result = find_category(value, ext, path + [key])
+            result = find_category(value, extension, path + [key])
             if result:
                 return result
 
