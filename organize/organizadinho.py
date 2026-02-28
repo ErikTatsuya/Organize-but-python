@@ -3,6 +3,7 @@
 import argparse
 from organize.core import organize, CATEGORIES
 from organize.gui.gui import main_gui
+from organize.undo import undo_organize
 
 def main():
     parser = argparse.ArgumentParser(
@@ -38,7 +39,8 @@ def main():
     elif args.command == "gui":
         main_gui()
 
-    #elif args.command == "undo":
+    elif args.command == "undo":
+        undo_organize()
 
 
 if __name__ == "__main__":

@@ -20,3 +20,19 @@ def log_organized_file(original_path, new_path):
     log_file.touch(exist_ok=True)
 
     log(log_file, log_data)
+
+def get_logs_sorted():
+    log_dir = Path("logs")
+
+    if not log_dir.exists():
+        return []
+
+    log_files = list(log_dir.glob("organize_log_*.log"))
+
+    sorted_log_files = sorted(
+        log_files,
+        key=lambda f: f.stat().st_mtime,
+        reverse=True
+    )
+
+    return sorted_log_files
