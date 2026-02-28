@@ -1,4 +1,4 @@
-from organize.log import log_organized_file
+from organize.log import log, generate_log_filename
 from pathlib import Path
 import shutil
 
@@ -104,6 +104,7 @@ def organize(base_path, CATEGORIES):
 
         destination.mkdir(parents=True, exist_ok=True)
 
-        log_organized_file(file, destination / file.name)
+        log_file = generate_log_filename(Path("logs"))
+        log(log_file ,file, destination)
 
         shutil.move(str(file), str(destination / file.name))
