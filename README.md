@@ -14,7 +14,8 @@ Ferramenta CLI e GUI para organizar arquivos baseado na extensão do arquivo.
 Clone o repositório:
 
 <p>
-  <code>git clone https://github.com/ErikTatsuya/Organize-but-python/ && cd organize</code>
+  <code>git clone https://github.com/ErikTatsuya/Organize-but-python/ </code>
+  <code>cd organize</code>
 </p>
 
 Instale localmente:
