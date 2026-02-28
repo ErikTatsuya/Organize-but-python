@@ -9,3 +9,8 @@ def undo_organize():
         return "no logs found"
 
     latest_log = logs[0]
+
+    with open(latest_log, "r") as file:
+        log_entries = file.readlines() 
+    for entry in log_entries:
+        if 
