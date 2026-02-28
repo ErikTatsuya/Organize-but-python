@@ -15,10 +15,39 @@ Clone o repositório:
 
 <p>
   <code>git clone https://github.com/ErikTatsuya/Organize-but-python/ </code>
+</p>
+
+E vá para o diretório "organize":
+
+<p>
   <code>cd organize</code>
 </p>
 
-Instale localmente:
+Depois crie a venv:
+
+<p>
+	<code>python -m venv venv</code>
+</p>
+Ativar a venv:
+<p>
+	linux:
+	<code>source venv/bin/activate</code>
+</p>
+
+ou
+
+<p>
+    windows:
+    	<code>.\venv\Scripts\Activate</code>
+</p>
+
+Instalar depedências:
+
+<p>
+	<code>pip install requirements.txt</code>
+</p>
+
+E então instale localmente:
 
 <p>
 	<code>pip install .</code>
