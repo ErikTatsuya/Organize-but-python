@@ -1,4 +1,4 @@
-#!/usr/bin/env python3t Path
+#!/usr/bin/env python3t
 
 import argparse
 from organize.core import organize, CATEGORIES
