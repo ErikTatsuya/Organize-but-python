@@ -7,8 +7,8 @@ import time
 clear("logs")
 
 time_spans = []
-amount_tests = 100
-amount_files = 150
+amount_tests = int(input("Rounds: "))
+amount_files = int(input("Files for each: "))
 
 for i in range(amount_tests):
     create_example("example", amount_files)
