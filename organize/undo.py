@@ -19,7 +19,7 @@ def undo(undo_amount: int):
         print("No logs found.")
         return
 
-    selected_logs = log_files[-undo_amount:]
+    selected_logs = log_files[-undo_amount:] #
 
     for log_file in reversed(selected_logs):
         print(f"Undoing {log_file.name}")

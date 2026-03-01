@@ -105,6 +105,8 @@ def organize(base_path, CATEGORIES):
 
         destination.mkdir(parents=True, exist_ok=True)
 
+        print(destination)
+
         write_log(log_file, file, destination)
 
         shutil.move(str(file), str(destination / file.name))
