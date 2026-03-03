@@ -26,7 +26,7 @@ E vá para o diretório "organize":
 Depois crie a venv:
 
 <p>
-	<code>python -m venv venv</code>
+	<code>python3 -m venv venv</code>
 </p>
 Ativar a venv:
 <p>
@@ -44,7 +44,7 @@ ou
 Instalar depedências:
 
 <p>
-	<code>pip install requirements.txt</code>
+	<code>pip install -r requirements.txt</code>
 </p>
 
 E então instale localmente:
