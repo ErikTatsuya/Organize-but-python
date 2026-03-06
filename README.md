@@ -44,8 +44,10 @@ ou
 Instalar depedências:
 
 <p>
-	<code>pip install requirements.txt</code>
+	<code>pip install -r requirements.txt</code>
 </p>
+
+ou caso esteja usando ubuntu
 
 E então instale localmente:
 
