@@ -5,6 +5,7 @@ organize/__init__.py
 organize/core.py
 organize/log.py
 organize/organizadinho.py
+organize/undo.py
 organize.egg-info/PKG-INFO
 organize.egg-info/SOURCES.txt
 organize.egg-info/dependency_links.txt

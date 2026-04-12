@@ -10,7 +10,7 @@ def log(log_file, log_data):
 
 def generate_log_filename(base_path):
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    return base_path / f"organize_log_{timestamp}.txt"
+    return base_path / f"organize_log_{timestamp}.log"
 
 def log_organized_file(original_path, new_path):
     log_data = f"Moved: '{original_path}' to '{new_path}'"
