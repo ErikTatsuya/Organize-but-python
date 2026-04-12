@@ -1,7 +1,7 @@
 example/
 logs/
 organize/__pycache__/
-venv/
-__pycache__/
+build/
+organize.egg-info/
+dist/
 *.pyc
-*.pyo

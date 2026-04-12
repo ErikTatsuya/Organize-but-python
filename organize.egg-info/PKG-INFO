@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: organize
-Version: 0.2.3
+Version: 0.2.5.1
 Summary: Ferramenta CLI e GUI para organizar arquivos por categoria
 Author: Erik
 License-Expression: MIT
@@ -37,7 +37,7 @@ E vá para o diretório "organize":
 Depois crie a venv:
 
 <p>
-	<code>python -m venv venv</code>
+	<code>python3 -m venv venv</code>
 </p>
 Ativar a venv:
 <p>

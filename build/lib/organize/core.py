@@ -1,4 +1,4 @@
-from organize.log import log_organized_file
+from organize.log import write_log, generate_log_filename
 from pathlib import Path
 import shutil
 
@@ -66,34 +66,26 @@ def find_special_file_category(special_map, filename):
 
 def organize(base_path, CATEGORIES):
     base_path = Path(base_path)
+    log_file = generate_log_filename("logs")
 
     for file in base_path.iterdir():
 
         if file.is_dir():
             continue
 
-        # 1. Construir extensão composta
         suffix_list = file.suffixes
-        cleaned = []
-
-        for s in suffix_list:
-            cleaned.append(s.lstrip(".").lower())
-
+        cleaned = [s.lstrip(".").lower() for s in suffix_list]
         full_suffix = ".".join(cleaned)
 
-        # 2. Tenta extensão composta
         category_path = find_category(CATEGORIES, full_suffix)
 
-        # 3. Se não tiver extensão nenhuma
         if not category_path and not suffix_list:
             category_path = ["other"]
 
-        # 4. Se não achou composta, tenta simples
         if not category_path:
             simple_ext = file.suffix.lower().lstrip(".")
             category_path = find_category(CATEGORIES, simple_ext)
 
-        # 5. Fallback final
         if not category_path:
             category_path = ["other"]
 
@@ -104,6 +96,8 @@ def organize(base_path, CATEGORIES):
 
         destination.mkdir(parents=True, exist_ok=True)
 
-        log_organized_file(file, destination / file.name)
+        final_destination = destination / file.name
 
-        shutil.move(str(file), str(destination / file.name))
+        write_log(log_file, file, final_destination)
+
+        shutil.move(str(file), str(final_destination))

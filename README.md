@@ -26,7 +26,7 @@ E vá para o diretório "organize":
 Depois crie a venv:
 
 <p>
-	<code>python -m venv venv</code>
+	<code>python3 -m venv venv</code>
 </p>
 Ativar a venv:
 <p>
