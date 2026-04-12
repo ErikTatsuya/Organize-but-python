@@ -18,26 +18,29 @@ def undo(undo_amount: int):
     if not log_file_paths:
         print("No logs found.")
         return
-    print(log_file_paths)
 
-    reversed_logs = reversed(log_file_paths)
-    selected_logs = reversed_logs[:undo_amount]
+    # pega os últimos logs (mais recentes primeiro)
+    selected_logs = log_file_paths[::-1][:undo_amount]
 
-    for log_file in reversed(selected_logs):
+    for log_file in selected_logs:
         print(f"Undoing {log_file.name}")
 
         with open(log_file, "r") as file:
             actions = [json.loads(line) for line in file]
 
+        # desfaz ações na ordem inversa
         for action in reversed(actions):
-            source = Path(action["destination"])
-            destination = Path(action["source"])
+            source = Path(action["destination"])   # onde o arquivo está agora
+            destination = Path(action["source"])   # onde ele deveria voltar
+
             print(f"Source: {source}")
             print(f"Destination: {destination}")
 
-            if destination.exists() and destination.is_file():
+            if source.exists():
+                # garante que a pasta de destino existe
+                destination.parent.mkdir(parents=True, exist_ok=True)
+
                 shutil.move(str(source), str(destination))
-                #print(f"Moved back: {destination} -> {source}")
+                print(f"Moved back: {source} -> {destination}")
             else:
-                ()
-                #print(f"Skipped (missing): {destination}")
+                print(f"Skipped (missing source): {source}")
